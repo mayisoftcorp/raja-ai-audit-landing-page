@@ -35,6 +35,12 @@ http://localhost:8080
 
 ## Deployment
 
+Live Vercel URL:
+
+```text
+https://raja-ai-audit-landing-page.vercel.app/
+```
+
 This project is Vercel-ready as a static site. No build step is required.
 
 ## Honest proof note
