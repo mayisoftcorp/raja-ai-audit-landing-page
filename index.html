@@ -17,6 +17,9 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
   <header class="site-header" aria-label="Primary navigation">
     <nav class="nav container">
       <a class="brand" href="#top" aria-label="RAJA at MAYISOFTCORP home">
@@ -26,6 +29,7 @@
       <div class="nav-links" aria-label="Page sections">
         <a href="#method">Method</a>
         <a href="#offer">Audit</a>
+        <a href="#scorecard">Scorecard</a>
         <a href="#faq">FAQ</a>
       </div>
       <a class="nav-cta" href="mailto:gansivraj@gmail.com?subject=AI%20Audit%20Request&body=Hi%20Raja%2C%20I%20want%20an%20AI%20Automation%20Audit.%20My%20business%20is%3A%20">Message “AI Audit”</a>
@@ -39,6 +43,11 @@
           <p class="eyebrow">Agentic AI Automation for SMB founders</p>
           <h1>Find the workflows where AI agents can save time, speed up follow-up, and remove operational drag.</h1>
           <p class="hero-subtitle">RAJA @ MAYISOFTCORP helps small and mid-sized business owners turn repetitive operations, sales support, and internal workflows into practical Agentic AI systems.</p>
+          <div class="hero-badges" aria-label="Landing page trust cues">
+            <span>Workflow-first</span>
+            <span>SMB-ready</span>
+            <span>No-hype AI</span>
+          </div>
           <div class="hero-actions">
             <a class="button primary" href="mailto:gansivraj@gmail.com?subject=AI%20Audit%20Request&body=Hi%20Raja%2C%20I%20want%20an%20AI%20Automation%20Audit.%20My%20business%20is%3A%20">Message “AI Audit”</a>
             <a class="button secondary" href="#offer">See what the audit includes</a>
@@ -57,6 +66,11 @@
             <span class="score-label">Audit focus</span>
             <strong>4D Agentic Business System</strong>
             <p>Discover bottlenecks → Design workflows → Deploy AI agents → Drive ROI.</p>
+          </div>
+          <div class="mini-system-map" aria-label="AI audit system map">
+            <div><span></span>Lead follow-up</div>
+            <div><span></span>Internal ops</div>
+            <div><span></span>Support routing</div>
           </div>
         </aside>
       </div>
@@ -98,6 +112,40 @@
           <article><span>02</span><h3>Improve response speed</h3><p>Map sales, support, and follow-up workflows where delays cost opportunities.</p></article>
           <article><span>03</span><h3>Reduce tool friction</h3><p>Find the handoffs where information gets copied, lost, or delayed across apps.</p></article>
           <article><span>04</span><h3>Prioritize ROI</h3><p>Rank automations by business impact, effort, repeatability, and readiness.</p></article>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="scorecard" class="section scorecard-section">
+      <div class="container scorecard-grid">
+        <div class="scorecard-copy">
+          <p class="eyebrow">Audit scorecard</p>
+          <h2>Prioritize automation opportunities before spending time or money on tools.</h2>
+          <p>The audit looks for repeatable work, clear handoffs, measurable outcomes, and places where a human-in-the-loop AI agent can reduce friction safely.</p>
+        </div>
+        <div class="scorecard-board" aria-label="Founder Automation Scorecard categories">
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h16"/></svg>
+            <h3>Repeatability</h3>
+            <p>Which tasks happen often enough to systemize?</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/></svg>
+            <h3>Workflow clarity</h3>
+            <p>Where should AI act, ask, or hand off?</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18l6-6 4 4 6-10"/></svg>
+            <h3>Business impact</h3>
+            <p>What improves speed, revenue, or capacity?</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7 7 1-5 5 1 7-6-4-6 4 1-7-5-5 7-1 3-7z"/></svg>
+            <h3>Implementation fit</h3>
+            <p>What can be launched without heavy complexity?</p>
+          </article>
         </div>
       </div>
     </section>
@@ -231,8 +279,17 @@
       <a href="mailto:gansivraj@gmail.com">gansivraj@gmail.com</a>
     </div>
   </footer>
+  <a class="sticky-mobile-cta" href="mailto:gansivraj@gmail.com?subject=AI%20Audit%20Request&body=Hi%20Raja%2C%20I%20want%20an%20AI%20Automation%20Audit.%20My%20business%20is%3A%20">Message “AI Audit”</a>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    const progress = document.getElementById('scrollProgress');
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      progress.style.width = `${pct}%`;
+    };
+    updateProgress();
+    window.addEventListener('scroll', updateProgress, { passive: true });
   </script>
 </body>
 </html>
