@@ -56,12 +56,22 @@ h3 { font-size: 20px; line-height: 1.15; letter-spacing: -.03em; margin-bottom: 
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin: 34px 0 18px; }
 .trust-line { color: #d8e7f5; font-weight: 700; }
 .hero-card { position: relative; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.055)); padding: 18px; box-shadow: var(--shadow); overflow: hidden; }
-.hero-card img { border-radius: 22px; border: 1px solid var(--line); aspect-ratio: 1 / 1; object-fit: cover; background: #0c1726; }
+.portrait-frame { position: relative; z-index: 1; width: min(72%, 310px); margin: 0 auto; border-radius: 999px; padding: 8px; background: linear-gradient(135deg, rgba(94,234,212,.7), rgba(96,165,250,.55)); box-shadow: 0 24px 70px rgba(94, 234, 212, .16); }
+.portrait-frame img { width: 100%; border-radius: 999px; border: 1px solid rgba(255,255,255,.28); aspect-ratio: 1 / 1; object-fit: cover; background: #0c1726; }
+.brand-strip { position: relative; z-index: 1; margin-top: 18px; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); background: rgba(255,255,255,.06); }
+.brand-strip img { width: 100%; aspect-ratio: 3 / 1.6; object-fit: cover; object-position: center; }
 .card-glow { position: absolute; inset: -30%; background: radial-gradient(circle, rgba(94,234,212,.22), transparent 45%); pointer-events: none; }
 .audit-score { position: relative; margin-top: 16px; padding: 20px; border-radius: 22px; background: rgba(2, 8, 23, .72); border: 1px solid var(--line); }
 .score-label { color: var(--gold); font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
 .audit-score strong { display: block; margin: 6px 0; font-size: 22px; }
 .problem, .method, .proof, .fit { background: rgba(255,255,255,.025); border-block: 1px solid rgba(255,255,255,.06); }
+.brand-visual { padding-top: 40px; }
+.brand-visual-panel { display: grid; grid-template-columns: .78fr 1.22fr; gap: 30px; align-items: center; border: 1px solid var(--line); border-radius: 34px; padding: 24px; background: linear-gradient(135deg, rgba(94,234,212,.075), rgba(96,165,250,.055)); box-shadow: var(--shadow); }
+.brand-visual-copy { padding: 14px; }
+.brand-visual-copy p:not(.eyebrow) { color: var(--muted); font-size: 18px; }
+.brand-visual-image { margin: 0; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); background: rgba(2,8,23,.75); }
+.brand-visual-image img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: center; }
+.brand-visual-image figcaption { padding: 12px 16px; color: var(--muted); font-size: 13px; font-weight: 700; border-top: 1px solid var(--line); }
 .stack p { color: var(--muted); font-size: 18px; }
 .center { text-align: center; }
 .max-heading { max-width: 820px; margin-left: auto; margin-right: auto; }
@@ -95,7 +105,7 @@ details p { margin: 12px 0 0; }
 .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
 @media (max-width: 900px) {
   .nav-links { display: none; }
-  .hero-grid, .two-column, .offer-grid, .faq-grid, .fit-grid, .method-panel, .proof-box { grid-template-columns: 1fr; }
+  .hero-grid, .two-column, .offer-grid, .faq-grid, .fit-grid, .method-panel, .proof-box, .brand-visual-panel { grid-template-columns: 1fr; }
   .outcome-grid, .benefit-list, .process-list, .method-steps { grid-template-columns: repeat(2, 1fr); }
   .section { padding: 72px 0; }
 }

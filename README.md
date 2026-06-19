@@ -16,7 +16,9 @@ A conversion-focused static landing page for the primary offer from the personal
 
 - `index.html` — accessible static landing page
 - `styles.css` — responsive visual design
-- `assets/raja-mayisoft-brand.png` — brand visual from the personal brand folder
+- `assets/Raja_personalBranding.jpg` — Raja portrait used in the hero section
+- `assets/Raja_personalBranding_mayisoft.png` — MAYISOFTCORP brand visual used in the hero, Open Graph image, and founder-led brand section
+- `assets/raja-mayisoft-brand.png` — earlier brand visual retained for reference
 - `strategy.md` — extracted landing page strategy and QA notes
 
 ## Local preview
